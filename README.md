@@ -60,6 +60,10 @@ Open `http://localhost:8501`. The dashboard provides:
 - anomaly-signal radar, PR curves, and cumulative gains curves;
 - filterable CSV and PDF inspection manifests.
 
+### Interface design
+
+The UI follows a Vercel-inspired visual system: solid black surfaces, neutral gray borders, white typography, compact radii, and restrained monochrome charts. It deliberately avoids gradients, blended backgrounds, colorful decorative treatments, and emoji branding. Keep operational colors semantic only—for example, red is reserved for abnormal load periods.
+
 ## Use an external dataset
 
 Pass a CSV containing at least `consumer_id`, `timestamp`, and `consumption_kwh`:

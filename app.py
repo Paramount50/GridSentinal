@@ -22,7 +22,6 @@ ARTIFACT_DIR = Path(__file__).parent / "artifacts"
 
 st.set_page_config(
     page_title="GridSentinel | Field Verification",
-    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -30,22 +29,31 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .stApp {background: radial-gradient(circle at 85% 5%, #12334a 0, #07111f 32%, #050b14 100%);}
-    [data-testid="stSidebar"] {background: #081423; border-right: 1px solid #18314a;}
-    .block-container {padding-top: 1.4rem; padding-bottom: 3rem; max-width: 1500px;}
-    .eyebrow {font-size: .74rem; letter-spacing: .16em; color: #5eead4; font-weight: 800; text-transform: uppercase;}
-    .hero-title {font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 800; line-height: 1.02; margin: .3rem 0; color: #f8fbff;}
-    .hero-copy {color: #9eb1c8; max-width: 760px; font-size: 1rem;}
-    .status-pill {display:inline-block; border:1px solid #2dd4bf55; background:#0d2b2a; color:#5eead4; padding:.35rem .7rem; border-radius:999px; font-size:.78rem; font-weight:700;}
-    .section-label {font-size: .75rem; letter-spacing: .12em; color: #7890aa; font-weight: 750; text-transform: uppercase; margin-top:.3rem;}
-    div[data-testid="stMetric"] {background: linear-gradient(145deg,#0d1d30,#0a1727); border:1px solid #1d3650; border-radius:14px; padding:1rem 1.1rem; box-shadow:0 12px 30px #00000025;}
-    div[data-testid="stMetric"] label {color:#8fa5bd !important;}
-    div[data-testid="stMetricValue"] {color:#f4f8fc;}
-    .risk-high {color:#ff7b7b; font-weight:800;}
-    .notice {background:#0d1d30; border-left:3px solid #14b8a6; border-radius:8px; padding:.8rem 1rem; color:#a8bbce; font-size:.88rem;}
-    .stTabs [data-baseweb="tab-list"] {gap:.5rem;}
-    .stTabs [data-baseweb="tab"] {background:#0c1929; border-radius:10px; padding:.5rem 1rem;}
-    .stTabs [aria-selected="true"] {background:#123148; color:#5eead4;}
+    html, body, [class*="css"] {font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;}
+    .stApp {background: #000000;}
+    [data-testid="stSidebar"] {background: #000000; border-right: 1px solid #262626;}
+    .block-container {padding-top: 1.75rem; padding-bottom: 3rem; max-width: 1400px;}
+    .eyebrow {font-size: .72rem; letter-spacing: .14em; color: #888888; font-weight: 600; text-transform: uppercase;}
+    .hero-title {font-size: clamp(2rem, 4vw, 3.35rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.02; margin: .45rem 0; color: #ededed;}
+    .hero-copy {color: #888888; max-width: 720px; font-size: .98rem; line-height: 1.6;}
+    .status-pill {display:inline-block; border:1px solid #333333; background:#0a0a0a; color:#ededed; padding:.35rem .7rem; border-radius:999px; font-size:.76rem; font-weight:550;}
+    .section-label {font-size: .72rem; letter-spacing: .12em; color: #737373; font-weight: 600; text-transform: uppercase; margin-top:.3rem;}
+    div[data-testid="stMetric"] {background:#0a0a0a; border:1px solid #262626; border-radius:8px; padding:1rem 1.1rem; box-shadow:none;}
+    div[data-testid="stMetric"] label {color:#888888 !important;}
+    div[data-testid="stMetricValue"] {color:#ededed; letter-spacing:-.035em;}
+    div[data-testid="stMetricDelta"] {background:#111111; border:1px solid #262626; border-radius:999px; color:#a1a1a1; padding:.1rem .45rem;}
+    .risk-high {color:#ededed; font-weight:700;}
+    .notice {background:#0a0a0a; border:1px solid #262626; border-radius:8px; padding:.8rem 1rem; color:#a1a1a1; font-size:.86rem;}
+    .stTabs [data-baseweb="tab-list"] {gap:0; border-bottom:1px solid #262626;}
+    .stTabs [data-baseweb="tab"] {background:transparent; border-radius:0; color:#737373; padding:.65rem 1rem;}
+    .stTabs [aria-selected="true"] {background:transparent; color:#ededed; border-bottom:1px solid #ededed;}
+    [data-testid="stDataFrame"] {border:1px solid #262626; border-radius:8px; overflow:hidden;}
+    .stButton > button, .stDownloadButton > button {background:#ededed; color:#0a0a0a; border:1px solid #ededed; border-radius:6px; font-weight:600;}
+    .stButton > button:hover, .stDownloadButton > button:hover {background:#ffffff; color:#000000; border-color:#ffffff;}
+    [data-baseweb="tag"] {background:#171717 !important; border:1px solid #333333 !important; color:#ededed !important;}
+    [data-baseweb="tag"] span, [data-baseweb="tag"] svg {color:#ededed !important; fill:#a1a1a1 !important;}
+    [data-baseweb="select"] > div {background:#0a0a0a; border-color:#262626;}
+    hr {border-color:#262626 !important;}
     </style>
     """,
     unsafe_allow_html=True,
@@ -112,7 +120,7 @@ def manifest_pdf(rows: pd.DataFrame) -> bytes:
     table.setStyle(
         TableStyle(
             [
-                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#0F766E")),
+                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#111111")),
                 ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
                 ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
                 ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#CBD5E1")),
@@ -136,7 +144,7 @@ def line_figure(consumer: pd.DataFrame, consumer_id: str) -> go.Figure:
             x=consumer.timestamp,
             y=consumer.expected_kwh,
             name="Expected baseline",
-            line=dict(color="#7188a3", width=1.5, dash="dot"),
+            line=dict(color="#737373", width=1.5, dash="dot"),
             hovertemplate="%{x}<br>Expected %{y:.2f} kWh<extra></extra>",
         )
     )
@@ -145,7 +153,7 @@ def line_figure(consumer: pd.DataFrame, consumer_id: str) -> go.Figure:
             x=consumer.timestamp,
             y=consumer.consumption_kwh,
             name="Observed",
-            line=dict(color="#2dd4bf", width=1.6),
+            line=dict(color="#EDEDED", width=1.6),
             hovertemplate="%{x}<br>Observed %{y:.2f} kWh<extra></extra>",
         )
     )
@@ -156,7 +164,7 @@ def line_figure(consumer: pd.DataFrame, consumer_id: str) -> go.Figure:
             y=abnormal.consumption_kwh,
             name="Injected abnormal period",
             mode="markers",
-            marker=dict(color="#fb7185", size=4, opacity=0.75),
+            marker=dict(color="#EF4444", size=4, opacity=0.8),
             hovertemplate="%{x}<br>Abnormal %{y:.2f} kWh<extra></extra>",
         )
     )
@@ -165,7 +173,7 @@ def line_figure(consumer: pd.DataFrame, consumer_id: str) -> go.Figure:
         height=460,
         template="plotly_dark",
         paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="#081423",
+        plot_bgcolor="#0A0A0A",
         margin=dict(l=10, r=10, t=55, b=10),
         legend=dict(orientation="h", y=1.08),
         xaxis_title=None,
@@ -195,8 +203,8 @@ def signal_radar(consumer: pd.DataFrame) -> go.Figure:
             r=np.r_[values, values[0]],
             theta=categories + [categories[0]],
             fill="toself",
-            line_color="#2dd4bf",
-            fillcolor="rgba(45,212,191,.18)",
+            line_color="#EDEDED",
+            fillcolor="rgba(237,237,237,.10)",
             name="Signal strength",
         )
     )
@@ -204,7 +212,7 @@ def signal_radar(consumer: pd.DataFrame) -> go.Figure:
         template="plotly_dark",
         height=360,
         paper_bgcolor="rgba(0,0,0,0)",
-        polar=dict(bgcolor="#081423", radialaxis=dict(range=[0, 1], showticklabels=False)),
+        polar=dict(bgcolor="#0A0A0A", radialaxis=dict(range=[0, 1], showticklabels=False)),
         margin=dict(l=45, r=45, t=35, b=35),
         showlegend=False,
     )
@@ -224,7 +232,7 @@ top_priority = ranking[ranking.priority_top_10_percent.astype(str).str.lower().i
 top_ten = ranking.head(10).copy()
 
 with st.sidebar:
-    st.markdown("### ⚡ GridSentinel")
+    st.markdown("### GridSentinel")
     st.caption("Field Verification Console")
     st.divider()
     tier_options = list(ranking.risk_tier.unique())
@@ -239,7 +247,7 @@ with st.sidebar:
         & ranking.evaluation_split.isin(cohorts)
     ].copy()
     st.divider()
-    st.markdown(f'<span class="status-pill">● Benchmarks verified</span>', unsafe_allow_html=True)
+    st.markdown('<span class="status-pill">Benchmarks verified</span>', unsafe_allow_html=True)
     st.caption(f"Selected model: {selected_model}")
     st.caption("Validation: synthetic injected attacks")
 
@@ -334,9 +342,9 @@ with comparison_tab:
             y="precision",
             color="model",
             title="Precision–recall curves",
-            color_discrete_sequence=["#2dd4bf", "#f59e0b"],
+            color_discrete_sequence=["#EDEDED", "#737373"],
         )
-        pr_figure.update_layout(template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#081423", height=410)
+        pr_figure.update_layout(template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#0A0A0A", height=410)
         st.plotly_chart(pr_figure, use_container_width=True, config={"displaylogo": False})
     with chart_right:
         gains_figure = px.line(
@@ -345,11 +353,11 @@ with comparison_tab:
             y="anomaly_capture",
             color="model",
             title="Cumulative gains",
-            color_discrete_sequence=["#2dd4bf", "#f59e0b"],
+            color_discrete_sequence=["#EDEDED", "#737373"],
         )
-        gains_figure.add_vline(x=0.2, line_dash="dash", line_color="#fb7185", annotation_text="Top 20%")
-        gains_figure.add_hline(y=0.6, line_dash="dot", line_color="#94a3b8", annotation_text="60% target")
-        gains_figure.update_layout(template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#081423", height=410)
+        gains_figure.add_vline(x=0.2, line_dash="dash", line_color="#EDEDED", annotation_text="Top 20%")
+        gains_figure.add_hline(y=0.6, line_dash="dot", line_color="#525252", annotation_text="60% target")
+        gains_figure.update_layout(template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#0A0A0A", height=410)
         st.plotly_chart(gains_figure, use_container_width=True, config={"displaylogo": False})
     st.markdown(
         '<div class="notice"><b>Scope:</b> reported metrics measure deterministic simulated attacks in this repository. A utility deployment requires labeled field outcomes, temporal/out-of-region validation, drift monitoring, and threshold governance.</div>',
