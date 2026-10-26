@@ -1,0 +1,60 @@
+{
+  "config": {
+    "seed": 42,
+    "n_consumers": 320,
+    "n_days": 70,
+    "theft_rate": 0.125,
+    "recall_target": 0.75,
+    "top20_target": 0.6,
+    "lstm_epochs": 24
+  },
+  "dataset": {
+    "readings": 537600,
+    "consumers": 320,
+    "abnormal_consumers": 40,
+    "train_consumers": 192,
+    "validation_consumers": 64,
+    "test_consumers": 64
+  },
+  "selected_model": "Random Forest",
+  "selection_basis": "highest validation AUC-PR",
+  "validation_auc_pr": {
+    "Random Forest": 1.0,
+    "LSTM": 1.0
+  },
+  "benchmark": {
+    "accuracy": 0.96875,
+    "recall": 0.75,
+    "precision": 1.0,
+    "f1": 0.8571428571428571,
+    "auc_roc": 1.0,
+    "auc_pr": 1.0,
+    "top10_capture": 0.875,
+    "top20_capture": 1.0,
+    "threshold": 0.8516443944104076
+  },
+  "models": {
+    "Random Forest": {
+      "accuracy": 0.96875,
+      "recall": 0.75,
+      "precision": 1.0,
+      "f1": 0.8571428571428571,
+      "auc_roc": 1.0,
+      "auc_pr": 1.0,
+      "top10_capture": 0.875,
+      "top20_capture": 1.0,
+      "threshold": 0.8516443944104076
+    },
+    "LSTM": {
+      "accuracy": 0.96875,
+      "recall": 0.75,
+      "precision": 1.0,
+      "f1": 0.8571428571428571,
+      "auc_roc": 1.0,
+      "auc_pr": 1.0,
+      "top10_capture": 0.875,
+      "top20_capture": 1.0,
+      "threshold": 0.8425021514890082
+    }
+  }
+}

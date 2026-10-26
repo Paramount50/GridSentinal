@@ -1,0 +1,129 @@
+model,population_fraction,anomaly_capture
+Random Forest,0.015625,0.125
+Random Forest,0.03125,0.25
+Random Forest,0.046875,0.375
+Random Forest,0.0625,0.5
+Random Forest,0.078125,0.625
+Random Forest,0.09375,0.75
+Random Forest,0.109375,0.875
+Random Forest,0.125,1.0
+Random Forest,0.140625,1.0
+Random Forest,0.15625,1.0
+Random Forest,0.171875,1.0
+Random Forest,0.1875,1.0
+Random Forest,0.203125,1.0
+Random Forest,0.21875,1.0
+Random Forest,0.234375,1.0
+Random Forest,0.25,1.0
+Random Forest,0.265625,1.0
+Random Forest,0.28125,1.0
+Random Forest,0.296875,1.0
+Random Forest,0.3125,1.0
+Random Forest,0.328125,1.0
+Random Forest,0.34375,1.0
+Random Forest,0.359375,1.0
+Random Forest,0.375,1.0
+Random Forest,0.390625,1.0
+Random Forest,0.40625,1.0
+Random Forest,0.421875,1.0
+Random Forest,0.4375,1.0
+Random Forest,0.453125,1.0
+Random Forest,0.46875,1.0
+Random Forest,0.484375,1.0
+Random Forest,0.5,1.0
+Random Forest,0.515625,1.0
+Random Forest,0.53125,1.0
+Random Forest,0.546875,1.0
+Random Forest,0.5625,1.0
+Random Forest,0.578125,1.0
+Random Forest,0.59375,1.0
+Random Forest,0.609375,1.0
+Random Forest,0.625,1.0
+Random Forest,0.640625,1.0
+Random Forest,0.65625,1.0
+Random Forest,0.671875,1.0
+Random Forest,0.6875,1.0
+Random Forest,0.703125,1.0
+Random Forest,0.71875,1.0
+Random Forest,0.734375,1.0
+Random Forest,0.75,1.0
+Random Forest,0.765625,1.0
+Random Forest,0.78125,1.0
+Random Forest,0.796875,1.0
+Random Forest,0.8125,1.0
+Random Forest,0.828125,1.0
+Random Forest,0.84375,1.0
+Random Forest,0.859375,1.0
+Random Forest,0.875,1.0
+Random Forest,0.890625,1.0
+Random Forest,0.90625,1.0
+Random Forest,0.921875,1.0
+Random Forest,0.9375,1.0
+Random Forest,0.953125,1.0
+Random Forest,0.96875,1.0
+Random Forest,0.984375,1.0
+Random Forest,1.0,1.0
+LSTM,0.015625,0.125
+LSTM,0.03125,0.25
+LSTM,0.046875,0.375
+LSTM,0.0625,0.5
+LSTM,0.078125,0.625
+LSTM,0.09375,0.75
+LSTM,0.109375,0.875
+LSTM,0.125,1.0
+LSTM,0.140625,1.0
+LSTM,0.15625,1.0
+LSTM,0.171875,1.0
+LSTM,0.1875,1.0
+LSTM,0.203125,1.0
+LSTM,0.21875,1.0
+LSTM,0.234375,1.0
+LSTM,0.25,1.0
+LSTM,0.265625,1.0
+LSTM,0.28125,1.0
+LSTM,0.296875,1.0
+LSTM,0.3125,1.0
+LSTM,0.328125,1.0
+LSTM,0.34375,1.0
+LSTM,0.359375,1.0
+LSTM,0.375,1.0
+LSTM,0.390625,1.0
+LSTM,0.40625,1.0
+LSTM,0.421875,1.0
+LSTM,0.4375,1.0
+LSTM,0.453125,1.0
+LSTM,0.46875,1.0
+LSTM,0.484375,1.0
+LSTM,0.5,1.0
+LSTM,0.515625,1.0
+LSTM,0.53125,1.0
+LSTM,0.546875,1.0
+LSTM,0.5625,1.0
+LSTM,0.578125,1.0
+LSTM,0.59375,1.0
+LSTM,0.609375,1.0
+LSTM,0.625,1.0
+LSTM,0.640625,1.0
+LSTM,0.65625,1.0
+LSTM,0.671875,1.0
+LSTM,0.6875,1.0
+LSTM,0.703125,1.0
+LSTM,0.71875,1.0
+LSTM,0.734375,1.0
+LSTM,0.75,1.0
+LSTM,0.765625,1.0
+LSTM,0.78125,1.0
+LSTM,0.796875,1.0
+LSTM,0.8125,1.0
+LSTM,0.828125,1.0
+LSTM,0.84375,1.0
+LSTM,0.859375,1.0
+LSTM,0.875,1.0
+LSTM,0.890625,1.0
+LSTM,0.90625,1.0
+LSTM,0.921875,1.0
+LSTM,0.9375,1.0
+LSTM,0.953125,1.0
+LSTM,0.96875,1.0
+LSTM,0.984375,1.0
+LSTM,1.0,1.0

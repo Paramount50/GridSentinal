@@ -1,0 +1,321 @@
+consumer_id,label,attack_type,primary_signal,risk_score,rank,population_percentile,risk_tier,priority_top_10_percent,evaluation_split
+C00071,1,intermittent_bypass,Peak Bypass,0.9402132945653997,1,0.003125,High,True,validation
+C00151,1,intermittent_bypass,Peak Bypass,0.9379550238873624,2,0.00625,High,True,train
+C00136,1,peak_inversion,Peak / Off-Peak Inversion,0.9362501885668078,3,0.009375,High,True,test
+C00203,1,intermittent_bypass,Peak Bypass,0.9358281957925568,4,0.0125,High,True,test
+C00254,1,flatline,Mean / Flatline Tamper,0.9356418320737411,5,0.015625,High,True,train
+C00138,1,flatline,Mean / Flatline Tamper,0.9354547512190458,6,0.01875,High,True,train
+C00169,1,sudden_drop,Sudden Drop,0.9349581630522869,7,0.021875,High,True,train
+C00089,1,sudden_drop,Sudden Drop,0.9342796173859601,8,0.025,High,True,train
+C00201,1,sudden_drop,Sudden Drop,0.9302300752240088,9,0.028125,High,True,train
+C00026,1,flatline,Mean / Flatline Tamper,0.9294657770076853,10,0.03125,High,True,train
+C00282,1,flatline,Mean / Flatline Tamper,0.9285334961541934,11,0.034375,High,True,train
+C00273,1,sudden_drop,Sudden Drop,0.9283657459788873,12,0.0375,High,True,test
+C00239,1,intermittent_bypass,Peak Bypass,0.9279939226948305,13,0.040625,High,True,train
+C00216,1,peak_inversion,Peak / Off-Peak Inversion,0.9224388122996184,14,0.04375,High,True,train
+C00124,1,peak_inversion,Peak / Off-Peak Inversion,0.9218905485871017,15,0.046875,High,True,train
+C00112,1,peak_inversion,Peak / Off-Peak Inversion,0.9210031592095445,16,0.05,High,True,train
+C00125,1,sudden_drop,Sudden Drop,0.9203719611847275,17,0.053125,High,True,train
+C00198,1,flatline,Mean / Flatline Tamper,0.9193845336683945,18,0.05625,High,True,train
+C00056,1,peak_inversion,Peak / Off-Peak Inversion,0.9183658547808404,19,0.059375,High,True,train
+C00219,1,intermittent_bypass,Peak Bypass,0.9180285490544099,20,0.0625,High,True,train
+C00233,1,sudden_drop,Sudden Drop,0.9157552544064848,21,0.065625,High,True,test
+C00021,1,sudden_drop,Sudden Drop,0.9153371285196045,22,0.06875,High,True,validation
+C00059,1,intermittent_bypass,Peak Bypass,0.9152801077229107,23,0.071875,High,True,train
+C00224,1,peak_inversion,Peak / Off-Peak Inversion,0.9135415518145251,24,0.075,High,True,validation
+C00186,1,flatline,Mean / Flatline Tamper,0.9117299302698499,25,0.078125,High,True,train
+C00029,1,sudden_drop,Sudden Drop,0.91148143526437,26,0.08125,High,True,train
+C00141,1,sudden_drop,Sudden Drop,0.9105481354053321,27,0.084375,High,True,validation
+C00246,1,flatline,Mean / Flatline Tamper,0.9102583376606445,28,0.0875,High,True,validation
+C00154,1,flatline,Mean / Flatline Tamper,0.9096129418171884,29,0.090625,High,True,train
+C00175,1,intermittent_bypass,Peak Bypass,0.903376594317783,30,0.09375,High,True,test
+C00025,1,sudden_drop,Sudden Drop,0.9026146776550106,31,0.096875,High,True,test
+C00307,1,intermittent_bypass,Peak Bypass,0.9007590377590975,32,0.1,High,True,validation
+C00039,1,intermittent_bypass,Peak Bypass,0.8947840173430462,33,0.103125,Medium-High,False,train
+C00212,1,peak_inversion,Peak / Off-Peak Inversion,0.8874842780100952,34,0.10625,Medium-High,False,train
+C00252,1,peak_inversion,Peak / Off-Peak Inversion,0.8843846093556609,35,0.109375,Medium-High,False,train
+C00285,1,sudden_drop,Sudden Drop,0.8831873005734329,36,0.1125,Medium-High,False,train
+C00153,1,sudden_drop,Sudden Drop,0.8786742278274403,37,0.115625,Medium-High,False,validation
+C00264,1,peak_inversion,Peak / Off-Peak Inversion,0.8516443944104076,38,0.11875,Medium-High,False,validation
+C00280,1,peak_inversion,Peak / Off-Peak Inversion,0.8334015686712158,39,0.121875,Medium-High,False,test
+C00028,1,peak_inversion,Peak / Off-Peak Inversion,0.5749065322258493,40,0.125,Medium-High,False,test
+C00152,0,benign,Normal,0.023276528032295383,41,0.128125,Medium-High,False,test
+C00061,0,benign,Normal,0.022782191796817352,42,0.13125,Medium-High,False,test
+C00129,0,benign,Normal,0.022645516088487194,43,0.134375,Medium-High,False,train
+C00091,0,benign,Normal,0.022436744974706224,44,0.1375,Medium-High,False,validation
+C00236,0,benign,Normal,0.022185674014928797,45,0.140625,Medium-High,False,validation
+C00104,0,benign,Normal,0.021610309009944335,46,0.14375,Medium-High,False,train
+C00148,0,benign,Normal,0.021446948916528156,47,0.146875,Medium-High,False,validation
+C00014,0,benign,Normal,0.021235574629611332,48,0.15,Medium-High,False,validation
+C00074,0,benign,Normal,0.021203330906685882,49,0.153125,Medium-High,False,test
+C00284,0,benign,Normal,0.02056731567073139,50,0.15625,Medium-High,False,train
+C00096,0,benign,Normal,0.020229764745860117,51,0.159375,Medium-High,False,train
+C00009,0,benign,Normal,0.020048959007443027,52,0.1625,Medium-High,False,test
+C00001,0,benign,Normal,0.020012720228620218,53,0.165625,Medium-High,False,train
+C00256,0,benign,Normal,0.019874479163570796,54,0.16875,Medium-High,False,train
+C00213,0,benign,Normal,0.01976534066259194,55,0.171875,Medium-High,False,train
+C00115,0,benign,Normal,0.01972656512857358,56,0.175,Medium-High,False,validation
+C00318,0,benign,Normal,0.019708745370257436,57,0.178125,Medium-High,False,train
+C00209,0,benign,Normal,0.019649478473401035,58,0.18125,Medium-High,False,train
+C00018,0,benign,Normal,0.01960998743612874,59,0.184375,Medium-High,False,test
+C00314,0,benign,Normal,0.019589092025205476,60,0.1875,Medium-High,False,train
+C00188,0,benign,Normal,0.019529314458482588,61,0.190625,Medium-High,False,train
+C00037,0,benign,Normal,0.019389078014751145,62,0.19375,Medium-High,False,train
+C00274,0,benign,Normal,0.0193263160809059,63,0.196875,Medium-High,False,train
+C00108,0,benign,Normal,0.01930047081709298,64,0.2,Medium-High,False,train
+C00255,0,benign,Normal,0.01923333967184234,65,0.203125,Medium,False,train
+C00301,0,benign,Normal,0.01918754719411231,66,0.20625,Medium,False,validation
+C00176,0,benign,Normal,0.019102176761721264,67,0.209375,Medium,False,train
+C00170,0,benign,Normal,0.019079972485999918,68,0.2125,Medium,False,test
+C00166,0,benign,Normal,0.019004289514016295,69,0.215625,Medium,False,train
+C00238,0,benign,Normal,0.018992533486186097,70,0.21875,Medium,False,test
+C00241,0,benign,Normal,0.018958793975554417,71,0.221875,Medium,False,train
+C00312,0,benign,Normal,0.018840567763443592,72,0.225,Medium,False,train
+C00139,0,benign,Normal,0.018755527656225273,73,0.228125,Medium,False,test
+C00174,0,benign,Normal,0.01863665447415918,74,0.23125,Medium,False,test
+C00015,0,benign,Normal,0.018597154573546108,75,0.234375,Medium,False,validation
+C00243,0,benign,Normal,0.018476354077834583,76,0.2375,Medium,False,validation
+C00092,0,benign,Normal,0.018451297186443817,77,0.240625,Medium,False,validation
+C00127,0,benign,Normal,0.018423367485378584,78,0.24375,Medium,False,train
+C00024,0,benign,Normal,0.01840847807338241,79,0.246875,Medium,False,train
+C00165,0,benign,Normal,0.01840233750989259,80,0.25,Medium,False,validation
+C00172,0,benign,Normal,0.01839284423139612,81,0.253125,Medium,False,validation
+C00132,0,benign,Normal,0.018368806962169013,82,0.25625,Medium,False,train
+C00296,0,benign,Normal,0.018339716120897312,83,0.259375,Medium,False,validation
+C00230,0,benign,Normal,0.018335301604982295,84,0.2625,Medium,False,train
+C00311,0,benign,Normal,0.018262689078575946,85,0.265625,Medium,False,validation
+C00288,0,benign,Normal,0.018258632323047336,86,0.26875,Medium,False,train
+C00002,0,benign,Normal,0.018238651882763548,87,0.271875,Medium,False,test
+C00012,0,benign,Normal,0.018135814509317897,88,0.275,Medium,False,train
+C00019,0,benign,Normal,0.018134200011492314,89,0.278125,Medium,False,train
+C00117,0,benign,Normal,0.018093378094687713,90,0.28125,Medium,False,test
+C00054,0,benign,Normal,0.018055902129710918,91,0.284375,Medium,False,test
+C00157,0,benign,Normal,0.018038209581189655,92,0.2875,Medium,False,train
+C00193,0,benign,Normal,0.017997762149713898,93,0.290625,Medium,False,train
+C00309,0,benign,Normal,0.01796236181081906,94,0.29375,Medium,False,train
+C00196,0,benign,Normal,0.017942629167832843,95,0.296875,Medium,False,test
+C00143,0,benign,Normal,0.01788021140150443,96,0.3,Medium,False,train
+C00306,0,benign,Normal,0.01786626677637219,97,0.303125,Medium,False,train
+C00182,0,benign,Normal,0.017865352510994022,98,0.30625,Medium,False,validation
+C00247,0,benign,Normal,0.01786060090870505,99,0.309375,Medium,False,test
+C00131,0,benign,Normal,0.01784969955104887,100,0.3125,Medium,False,train
+C00065,0,benign,Normal,0.01784755409701641,101,0.315625,Medium,False,train
+C00020,0,benign,Normal,0.01782292572514005,102,0.31875,Medium,False,train
+C00286,0,benign,Normal,0.017790805727198742,103,0.321875,Medium,False,train
+C00150,0,benign,Normal,0.01778891442654663,104,0.325,Medium,False,test
+C00270,0,benign,Normal,0.01775361623234104,105,0.328125,Medium,False,train
+C00281,0,benign,Normal,0.017747981189513054,106,0.33125,Medium,False,validation
+C00292,0,benign,Normal,0.017716550775785194,107,0.334375,Medium,False,test
+C00237,0,benign,Normal,0.017690590250145955,108,0.3375,Medium,False,train
+C00073,0,benign,Normal,0.017687775244026517,109,0.340625,Medium,False,validation
+C00231,0,benign,Normal,0.017676895175372038,110,0.34375,Medium,False,test
+C00229,0,benign,Normal,0.017655179628320316,111,0.346875,Medium,False,train
+C00106,0,benign,Normal,0.01758976395668053,112,0.35,Medium,False,train
+C00179,0,benign,Normal,0.017548172387344477,113,0.353125,Medium,False,train
+C00016,0,benign,Normal,0.017534938488161306,114,0.35625,Medium,False,train
+C00023,0,benign,Normal,0.01752229434889885,115,0.359375,Medium,False,validation
+C00228,0,benign,Normal,0.017511500154102033,116,0.3625,Medium,False,validation
+C00217,0,benign,Normal,0.01750900829255782,117,0.365625,Medium,False,test
+C00235,0,benign,Normal,0.017506849213121827,118,0.36875,Medium,False,train
+C00164,0,benign,Normal,0.017473627945016546,119,0.371875,Medium,False,train
+C00265,0,benign,Normal,0.01745298613611457,120,0.375,Medium,False,train
+C00062,0,benign,Normal,0.017451249618633893,121,0.378125,Medium,False,validation
+C00227,0,benign,Normal,0.01732649946409724,122,0.38125,Medium,False,train
+C00075,0,benign,Normal,0.017324953510174348,123,0.384375,Medium,False,train
+C00147,0,benign,Normal,0.01729109309586595,124,0.3875,Medium,False,validation
+C00120,0,benign,Normal,0.01728905231214249,125,0.390625,Medium,False,train
+C00184,0,benign,Normal,0.017272614624550157,126,0.39375,Medium,False,test
+C00260,0,benign,Normal,0.017254202617803405,127,0.396875,Medium,False,test
+C00167,0,benign,Normal,0.017251965529191636,128,0.4,Medium,False,train
+C00290,0,benign,Normal,0.017250235760175387,129,0.403125,Medium,False,test
+C00088,0,benign,Normal,0.017250204609893797,130,0.40625,Medium,False,train
+C00297,0,benign,Normal,0.017218780829142553,131,0.409375,Medium,False,validation
+C00202,0,benign,Normal,0.017208082055897484,132,0.4125,Medium,False,train
+C00320,0,benign,Normal,0.017203417561372444,133,0.415625,Medium,False,test
+C00317,0,benign,Normal,0.017183794098963603,134,0.41875,Medium,False,train
+C00298,0,benign,Normal,0.017154403595603093,135,0.421875,Medium,False,train
+C00220,0,benign,Normal,0.017148288514255948,136,0.425,Medium,False,validation
+C00187,0,benign,Normal,0.017139671022924265,137,0.428125,Medium,False,train
+C00017,0,benign,Normal,0.0171079501044206,138,0.43125,Medium,False,train
+C00163,0,benign,Normal,0.01709738039729782,139,0.434375,Medium,False,train
+C00053,0,benign,Normal,0.017092526691028145,140,0.4375,Medium,False,train
+C00004,0,benign,Normal,0.01707747628159068,141,0.440625,Medium,False,validation
+C00161,0,benign,Normal,0.017073164356323577,142,0.44375,Medium,False,train
+C00111,0,benign,Normal,0.017070806811886424,143,0.446875,Medium,False,train
+C00080,0,benign,Normal,0.017065297486947763,144,0.45,Medium,False,validation
+C00006,0,benign,Normal,0.017051642020632696,145,0.453125,Medium,False,train
+C00181,0,benign,Normal,0.017039770738955424,146,0.45625,Medium,False,train
+C00105,0,benign,Normal,0.017020631425984513,147,0.459375,Medium,False,test
+C00211,0,benign,Normal,0.017020631425984513,148,0.4625,Medium,False,train
+C00048,0,benign,Normal,0.01698860268996297,149,0.465625,Medium,False,train
+C00084,0,benign,Normal,0.01695107093213931,150,0.46875,Medium,False,train
+C00072,0,benign,Normal,0.01694847254654976,151,0.471875,Medium,False,test
+C00262,0,benign,Normal,0.016933188663521417,152,0.475,Medium,False,train
+C00258,0,benign,Normal,0.016927260572947574,153,0.478125,Medium,False,train
+C00011,0,benign,Normal,0.01692647542137925,154,0.48125,Medium,False,train
+C00195,0,benign,Normal,0.016921456543150575,155,0.484375,Medium,False,train
+C00033,0,benign,Normal,0.016915313679482836,156,0.4875,Medium,False,train
+C00066,0,benign,Normal,0.016911691815931756,157,0.490625,Medium,False,train
+C00133,0,benign,Normal,0.016895772019815566,158,0.49375,Medium,False,train
+C00109,0,benign,Normal,0.016882030048087755,159,0.496875,Medium,False,train
+C00178,0,benign,Normal,0.01687673971926865,160,0.5,Medium,False,test
+C00063,0,benign,Normal,0.016875309406047718,161,0.503125,Low,False,validation
+C00068,0,benign,Normal,0.016874118052656022,162,0.50625,Low,False,validation
+C00268,0,benign,Normal,0.016872334963056294,163,0.509375,Low,False,test
+C00249,0,benign,Normal,0.016866001985797158,164,0.5125,Low,False,train
+C00036,0,benign,Normal,0.01686581806099998,165,0.515625,Low,False,train
+C00007,0,benign,Normal,0.01686581806099998,166,0.51875,Low,False,train
+C00057,0,benign,Normal,0.016854229900567244,167,0.521875,Low,False,test
+C00162,0,benign,Normal,0.016851448810356197,168,0.525,Low,False,train
+C00044,0,benign,Normal,0.0168471770875642,169,0.528125,Low,False,train
+C00030,0,benign,Normal,0.016843644571017665,170,0.53125,Low,False,train
+C00038,0,benign,Normal,0.016826314006647636,171,0.534375,Low,False,validation
+C00192,0,benign,Normal,0.016796586239680594,172,0.5375,Low,False,validation
+C00045,0,benign,Normal,0.016791762139968913,173,0.540625,Low,False,train
+C00107,0,benign,Normal,0.016791762139968913,174,0.54375,Low,False,train
+C00294,0,benign,Normal,0.016786167688096522,175,0.546875,Low,False,test
+C00083,0,benign,Normal,0.016779410569253538,176,0.55,Low,False,train
+C00110,0,benign,Normal,0.01677236332518316,177,0.553125,Low,False,validation
+C00113,0,benign,Normal,0.01671990956428163,178,0.55625,Low,False,train
+C00191,0,benign,Normal,0.016718485185654292,179,0.559375,Low,False,train
+C00221,0,benign,Normal,0.016717768060493073,180,0.5625,Low,False,train
+C00064,0,benign,Normal,0.01671507825217176,181,0.565625,Low,False,train
+C00022,0,benign,Normal,0.016711704337368762,182,0.56875,Low,False,test
+C00207,0,benign,Normal,0.01669834414094089,183,0.571875,Low,False,train
+C00267,0,benign,Normal,0.016693119829646556,184,0.575,Low,False,train
+C00250,0,benign,Normal,0.01669224537679811,185,0.578125,Low,False,train
+C00289,0,benign,Normal,0.016686652107780493,186,0.58125,Low,False,validation
+C00189,0,benign,Normal,0.01668465558507874,187,0.584375,Low,False,validation
+C00266,0,benign,Normal,0.016644845933574504,188,0.5875,Low,False,validation
+C00295,0,benign,Normal,0.016644845933574504,189,0.590625,Low,False,train
+C00272,0,benign,Normal,0.016644099653857165,190,0.59375,Low,False,validation
+C00008,0,benign,Normal,0.01663967514233528,191,0.596875,Low,False,test
+C00134,0,benign,Normal,0.016639390713543582,192,0.6,Low,False,train
+C00302,0,benign,Normal,0.016639390713543582,193,0.603125,Low,False,train
+C00027,0,benign,Normal,0.016639390713543582,194,0.60625,Low,False,test
+C00168,0,benign,Normal,0.016639390713543582,195,0.609375,Low,False,train
+C00180,0,benign,Normal,0.016639390713543582,196,0.6125,Low,False,train
+C00159,0,benign,Normal,0.016639390713543582,197,0.615625,Low,False,train
+C00145,0,benign,Normal,0.016639390713543582,198,0.61875,Low,False,test
+C00156,0,benign,Normal,0.016639390713543582,199,0.621875,Low,False,train
+C00160,0,benign,Normal,0.016639390713543582,200,0.625,Low,False,train
+C00257,0,benign,Normal,0.016639390713543582,201,0.628125,Low,False,train
+C00283,0,benign,Normal,0.016639390713543582,202,0.63125,Low,False,train
+C00090,0,benign,Normal,0.016639390713543582,203,0.634375,Low,False,train
+C00094,0,benign,Normal,0.016639390713543582,204,0.6375,Low,False,validation
+C00101,0,benign,Normal,0.016638397580260072,205,0.640625,Low,False,train
+C00128,0,benign,Normal,0.016638397580260072,206,0.64375,Low,False,train
+C00287,0,benign,Normal,0.016638397580260072,207,0.646875,Low,False,train
+C00122,0,benign,Normal,0.016638104432003243,208,0.65,Low,False,test
+C00158,0,benign,Normal,0.016638104432003243,209,0.653125,Low,False,validation
+C00140,0,benign,Normal,0.016635763624725176,210,0.65625,Low,False,train
+C00081,0,benign,Normal,0.016634973085157906,211,0.659375,Low,False,test
+C00208,0,benign,Normal,0.016634747643409067,212,0.6625,Low,False,train
+C00173,0,benign,Normal,0.016634747643409067,213,0.665625,Low,False,train
+C00123,0,benign,Normal,0.016634747643409067,214,0.66875,Low,False,train
+C00093,0,benign,Normal,0.016634747643409067,215,0.671875,Low,False,train
+C00085,0,benign,Normal,0.016634063371018217,216,0.675,Low,False,train
+C00240,0,benign,Normal,0.016628946916137616,217,0.678125,Low,False,train
+C00278,0,benign,Normal,0.01662725063398538,218,0.68125,Low,False,train
+C00244,0,benign,Normal,0.01662725063398538,219,0.684375,Low,False,train
+C00205,0,benign,Normal,0.016624888648906967,220,0.6875,Low,False,train
+C00171,0,benign,Normal,0.016621557991275387,221,0.690625,Low,False,train
+C00293,0,benign,Normal,0.016615991596874245,222,0.69375,Low,False,validation
+C00130,0,benign,Normal,0.016615991596874245,223,0.696875,Low,False,train
+C00058,0,benign,Normal,0.016615991596874245,224,0.7,Low,False,validation
+C00303,0,benign,Normal,0.016615991596874245,225,0.703125,Low,False,train
+C00049,0,benign,Normal,0.016615991596874245,226,0.70625,Low,False,train
+C00183,0,benign,Normal,0.016559156291597227,227,0.709375,Low,False,test
+C00177,0,benign,Normal,0.016559156291597227,228,0.7125,Low,False,train
+C00121,0,benign,Normal,0.016559156291597227,229,0.715625,Low,False,train
+C00114,0,benign,Normal,0.016559156291597227,230,0.71875,Low,False,test
+C00116,0,benign,Normal,0.016559156291597227,231,0.721875,Low,False,train
+C00142,0,benign,Normal,0.016559156291597227,232,0.725,Low,False,train
+C00155,0,benign,Normal,0.016559156291597227,233,0.728125,Low,False,validation
+C00149,0,benign,Normal,0.016559156291597227,234,0.73125,Low,False,train
+C00119,0,benign,Normal,0.016559156291597227,235,0.734375,Low,False,test
+C00126,0,benign,Normal,0.016559156291597227,236,0.7375,Low,False,train
+C00137,0,benign,Normal,0.016559156291597227,237,0.740625,Low,False,validation
+C00118,0,benign,Normal,0.016559156291597227,238,0.74375,Low,False,validation
+C00315,0,benign,Normal,0.016559156291597227,239,0.746875,Low,False,test
+C00135,0,benign,Normal,0.016559156291597227,240,0.75,Low,False,test
+C00310,0,benign,Normal,0.016559156291597227,241,0.753125,Low,False,train
+C00308,0,benign,Normal,0.016559156291597227,242,0.75625,Low,False,test
+C00305,0,benign,Normal,0.016559156291597227,243,0.759375,Low,False,train
+C00313,0,benign,Normal,0.016559156291597227,244,0.7625,Low,False,train
+C00005,0,benign,Normal,0.016559156291597227,245,0.765625,Low,False,validation
+C00003,0,benign,Normal,0.016559156291597227,246,0.76875,Low,False,train
+C00013,0,benign,Normal,0.016559156291597227,247,0.771875,Low,False,train
+C00010,0,benign,Normal,0.016559156291597227,248,0.775,Low,False,train
+C00319,0,benign,Normal,0.016559156291597227,249,0.778125,Low,False,validation
+C00316,0,benign,Normal,0.016559156291597227,250,0.78125,Low,False,validation
+C00146,0,benign,Normal,0.016559156291597227,251,0.784375,Low,False,test
+C00144,0,benign,Normal,0.016559156291597227,252,0.7875,Low,False,train
+C00190,0,benign,Normal,0.016559156291597227,253,0.790625,Low,False,train
+C00100,0,benign,Normal,0.016559156291597227,254,0.79375,Low,False,validation
+C00103,0,benign,Normal,0.016559156291597227,255,0.796875,Low,False,train
+C00185,0,benign,Normal,0.016559156291597227,256,0.8,Low,False,validation
+C00050,0,benign,Normal,0.016559156291597227,257,0.803125,Low,False,test
+C00234,0,benign,Normal,0.016559156291597227,258,0.80625,Low,False,train
+C00226,0,benign,Normal,0.016559156291597227,259,0.809375,Low,False,train
+C00232,0,benign,Normal,0.016559156291597227,260,0.8125,Low,False,validation
+C00225,0,benign,Normal,0.016559156291597227,261,0.815625,Low,False,train
+C00077,0,benign,Normal,0.016559156291597227,262,0.81875,Low,False,train
+C00078,0,benign,Normal,0.016559156291597227,263,0.821875,Low,False,train
+C00079,0,benign,Normal,0.016559156291597227,264,0.825,Low,False,train
+C00070,0,benign,Normal,0.016559156291597227,265,0.828125,Low,False,train
+C00069,0,benign,Normal,0.016559156291597227,266,0.83125,Low,False,train
+C00076,0,benign,Normal,0.016559156291597227,267,0.834375,Low,False,train
+C00214,0,benign,Normal,0.016559156291597227,268,0.8375,Low,False,test
+C00218,0,benign,Normal,0.016559156291597227,269,0.840625,Low,False,validation
+C00222,0,benign,Normal,0.016559156291597227,270,0.84375,Low,False,train
+C00223,0,benign,Normal,0.016559156291597227,271,0.846875,Low,False,train
+C00067,0,benign,Normal,0.016559156291597227,272,0.85,Low,False,test
+C00087,0,benign,Normal,0.016559156291597227,273,0.853125,Low,False,train
+C00086,0,benign,Normal,0.016559156291597227,274,0.85625,Low,False,train
+C00095,0,benign,Normal,0.016559156291597227,275,0.859375,Low,False,train
+C00210,0,benign,Normal,0.016559156291597227,276,0.8625,Low,False,train
+C00215,0,benign,Normal,0.016559156291597227,277,0.865625,Low,False,test
+C00097,0,benign,Normal,0.016559156291597227,278,0.86875,Low,False,train
+C00098,0,benign,Normal,0.016559156291597227,279,0.871875,Low,False,test
+C00099,0,benign,Normal,0.016559156291597227,280,0.875,Low,False,test
+C00102,0,benign,Normal,0.016559156291597227,281,0.878125,Low,False,validation
+C00204,0,benign,Normal,0.016559156291597227,282,0.88125,Low,False,validation
+C00199,0,benign,Normal,0.016559156291597227,283,0.884375,Low,False,train
+C00197,0,benign,Normal,0.016559156291597227,284,0.8875,Low,False,test
+C00194,0,benign,Normal,0.016559156291597227,285,0.890625,Low,False,test
+C00200,0,benign,Normal,0.016559156291597227,286,0.89375,Low,False,train
+C00206,0,benign,Normal,0.016559156291597227,287,0.896875,Low,False,train
+C00082,0,benign,Normal,0.016559156291597227,288,0.9,Low,False,test
+C00277,0,benign,Normal,0.016559156291597227,289,0.903125,Low,False,train
+C00276,0,benign,Normal,0.016559156291597227,290,0.90625,Low,False,train
+C00275,0,benign,Normal,0.016559156291597227,291,0.909375,Low,False,train
+C00271,0,benign,Normal,0.016559156291597227,292,0.9125,Low,False,validation
+C00269,0,benign,Normal,0.016559156291597227,293,0.915625,Low,False,test
+C00259,0,benign,Normal,0.016559156291597227,294,0.91875,Low,False,validation
+C00261,0,benign,Normal,0.016559156291597227,295,0.921875,Low,False,validation
+C00263,0,benign,Normal,0.016559156291597227,296,0.925,Low,False,validation
+C00060,0,benign,Normal,0.016559156291597227,297,0.928125,Low,False,train
+C00051,0,benign,Normal,0.016559156291597227,298,0.93125,Low,False,validation
+C00052,0,benign,Normal,0.016559156291597227,299,0.934375,Low,False,train
+C00242,0,benign,Normal,0.016559156291597227,300,0.9375,Low,False,train
+C00248,0,benign,Normal,0.016559156291597227,301,0.940625,Low,False,train
+C00245,0,benign,Normal,0.016559156291597227,302,0.94375,Low,False,train
+C00251,0,benign,Normal,0.016559156291597227,303,0.946875,Low,False,test
+C00253,0,benign,Normal,0.016559156291597227,304,0.95,Low,False,train
+C00055,0,benign,Normal,0.016559156291597227,305,0.953125,Low,False,test
+C00047,0,benign,Normal,0.016559156291597227,306,0.95625,Low,False,validation
+C00042,0,benign,Normal,0.016559156291597227,307,0.959375,Low,False,train
+C00043,0,benign,Normal,0.016559156291597227,308,0.9625,Low,False,train
+C00041,0,benign,Normal,0.016559156291597227,309,0.965625,Low,False,test
+C00040,0,benign,Normal,0.016559156291597227,310,0.96875,Low,False,train
+C00035,0,benign,Normal,0.016559156291597227,311,0.971875,Low,False,train
+C00034,0,benign,Normal,0.016559156291597227,312,0.975,Low,False,train
+C00279,0,benign,Normal,0.016559156291597227,313,0.978125,Low,False,train
+C00046,0,benign,Normal,0.016559156291597227,314,0.98125,Low,False,test
+C00031,0,benign,Normal,0.016559156291597227,315,0.984375,Low,False,train
+C00032,0,benign,Normal,0.016559156291597227,316,0.9875,Low,False,train
+C00291,0,benign,Normal,0.016559156291597227,317,0.990625,Low,False,validation
+C00299,0,benign,Normal,0.016559156291597227,318,0.99375,Low,False,train
+C00300,0,benign,Normal,0.016559156291597227,319,0.996875,Low,False,test
+C00304,0,benign,Normal,0.016559156291597227,320,1.0,Low,False,train

@@ -4,5 +4,8 @@ __pycache__/
 .pytest_cache/
 .streamlit/secrets.toml
 data/generated/
-artifacts/
+artifacts/*.pt
+artifacts/*.joblib
+artifacts/priority_meter_readings.csv
+artifacts-smoke/
 
