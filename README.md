@@ -77,11 +77,11 @@ The UI follows a Vercel-inspired visual system: solid black surfaces, neutral gr
 
 Deploy from [Streamlit Community Cloud](https://share.streamlit.io/) using these exact values:
 
-- Repository: `Paramount50/CPI`
+- Repository: `Paramount50/GridSentinal`
 - Branch: `main`
 - Main file path: `app.py`
 
-Sign in with GitHub and ensure Streamlit Community Cloud has access to the repository. Local Streamlit can prefill these values only when the app was launched from the Git checkout with the active branch pushed. The venv-verified runtime resolves this checkout as `Paramount50/CPI` on `origin/main`.
+Sign in with GitHub and ensure Streamlit Community Cloud has access to the repository. Local Streamlit can prefill these values only when the app was launched from the Git checkout with the active branch pushed. The venv-verified runtime resolves this checkout as `Paramount50/GridSentinal` on `origin/main`.
 
 ## Use an external dataset
 
