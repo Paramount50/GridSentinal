@@ -83,6 +83,15 @@ Deploy from [Streamlit Community Cloud](https://share.streamlit.io/) using these
 
 Sign in with GitHub and ensure Streamlit Community Cloud has access to the repository. Local Streamlit can prefill these values only when the app was launched from the Git checkout with the active branch pushed. The venv-verified runtime resolves this checkout as `Paramount50/GridSentinal` on `origin/main`.
 
+If the local **Deploy** button reports that no remote repository is connected, use the Community Cloud link above and enter the three values manually. The local toolbar can fail during its GitHub handoff even when Git itself resolves the remote correctly. Confirm the repository state with:
+
+```powershell
+git remote -v
+git status -sb
+```
+
+The remote should be `https://github.com/Paramount50/GridSentinal.git`, and `main` should not be ahead of `origin/main`.
+
 ## Use an external dataset
 
 Pass a CSV containing at least `consumer_id`, `timestamp`, and `consumption_kwh`:
