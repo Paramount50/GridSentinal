@@ -31,7 +31,7 @@
     "auc_pr": 1.0,
     "top10_capture": 0.875,
     "top20_capture": 1.0,
-    "threshold": 0.8516443944104076
+    "threshold": 0.8516501238479707
   },
   "models": {
     "Random Forest": {
@@ -43,7 +43,7 @@
       "auc_pr": 1.0,
       "top10_capture": 0.875,
       "top20_capture": 1.0,
-      "threshold": 0.8516443944104076
+      "threshold": 0.8516501238479707
     },
     "LSTM": {
       "accuracy": 0.96875,
@@ -54,7 +54,7 @@
       "auc_pr": 1.0,
       "top10_capture": 0.875,
       "top20_capture": 1.0,
-      "threshold": 0.8425021514890082
+      "threshold": 0.8425021767616272
     }
   }
 }

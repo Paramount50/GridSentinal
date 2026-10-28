@@ -231,7 +231,9 @@ def run_evaluation(
     pd.concat(gains_frames, ignore_index=True).to_csv(output / "gains_curves.csv", index=False)
     pd.DataFrame(lstm_result.history).to_csv(output / "lstm_training_history.csv", index=False)
     data[data.consumer_id.isin(ranking.head(50).consumer_id)].to_csv(
-        output / "priority_meter_readings.csv.gz", index=False, compression="gzip"
+        output / "priority_meter_readings.csv.gz",
+        index=False,
+        compression={"method": "gzip", "mtime": 0},
     )
     (output / "evaluation_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     torch.save(lstm_result.model.state_dict(), output / "lstm_model.pt")

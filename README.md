@@ -47,10 +47,19 @@ Python 3.11–3.13 is recommended.
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 python evaluate_models.py
-streamlit run app.py
+python -m streamlit run app.py
 ```
+
+Using `python -m` for installation and launch guarantees that both commands use the interpreter from the active `.venv`. Verify it before running the benchmark:
+
+```powershell
+python -c "import sys; print(sys.executable)"
+python -m streamlit version
+```
+
+The executable should end in `CPI\.venv\Scripts\python.exe`.
 
 Open `http://localhost:8501`. The dashboard provides:
 
@@ -63,6 +72,16 @@ Open `http://localhost:8501`. The dashboard provides:
 ### Interface design
 
 The UI follows a Vercel-inspired visual system: solid black surfaces, neutral gray borders, white typography, compact radii, and restrained monochrome charts. It deliberately avoids gradients, blended backgrounds, colorful decorative treatments, and emoji branding. Keep operational colors semantic only—for example, red is reserved for abnormal load periods.
+
+### Streamlit Community Cloud
+
+Deploy from [Streamlit Community Cloud](https://share.streamlit.io/) using these exact values:
+
+- Repository: `Paramount50/CPI`
+- Branch: `main`
+- Main file path: `app.py`
+
+Sign in with GitHub and ensure Streamlit Community Cloud has access to the repository. Local Streamlit can prefill these values only when the app was launched from the Git checkout with the active branch pushed. The venv-verified runtime resolves this checkout as `Paramount50/CPI` on `origin/main`.
 
 ## Use an external dataset
 

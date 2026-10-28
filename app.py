@@ -53,6 +53,8 @@ st.markdown(
     [data-baseweb="tag"] {background:#171717 !important; border:1px solid #333333 !important; color:#ededed !important;}
     [data-baseweb="tag"] span, [data-baseweb="tag"] svg {color:#ededed !important; fill:#a1a1a1 !important;}
     [data-baseweb="select"] > div {background:#0a0a0a; border-color:#262626;}
+    [aria-label="Selected values"] > div {background:#171717 !important; border:1px solid #333333 !important; color:#ededed !important;}
+    [aria-label="Selected values"] > div *, button[aria-label^="Remove "] {color:#ededed !important; fill:#a1a1a1 !important;}
     hr {border-color:#262626 !important;}
     </style>
     """,
@@ -282,7 +284,7 @@ with overview_tab:
     edited = st.data_editor(
         display,
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
         disabled=["rank", "consumer_id", "risk_score", "risk_tier", "primary_signal", "trend_7d"],
         column_config={
             "rank": st.column_config.NumberColumn("Rank", format="#%d", width="small"),
@@ -314,14 +316,14 @@ with inspector_tab:
         left, right = st.columns([2.3, 1])
         with left:
             st.plotly_chart(
-                line_figure(consumer, selected_id), use_container_width=True, config={"displaylogo": False}
+                line_figure(consumer, selected_id), width="stretch", config={"displaylogo": False}
             )
         with right:
             st.metric("Calibrated risk", f"{selected_row.risk_score:.3f}")
             st.metric("Priority rank", f"#{int(selected_row['rank'])}")
             st.markdown(f"**Signal:** {selected_row.primary_signal}")
             st.plotly_chart(
-                signal_radar(consumer), use_container_width=True, config={"displayModeBar": False}
+                signal_radar(consumer), width="stretch", config={"displayModeBar": False}
             )
 
 with comparison_tab:
@@ -333,7 +335,7 @@ with comparison_tab:
     formatted_metrics = metrics.copy()
     metric_cols = ["accuracy", "recall", "precision", "f1", "auc_roc", "auc_pr", "top10_capture", "top20_capture"]
     formatted_metrics[metric_cols] = formatted_metrics[metric_cols].map(lambda value: f"{value:.1%}")
-    st.dataframe(formatted_metrics, hide_index=True, use_container_width=True)
+    st.dataframe(formatted_metrics, hide_index=True, width="stretch")
     chart_left, chart_right = st.columns(2)
     with chart_left:
         pr_figure = px.line(
@@ -345,7 +347,7 @@ with comparison_tab:
             color_discrete_sequence=["#EDEDED", "#737373"],
         )
         pr_figure.update_layout(template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#0A0A0A", height=410)
-        st.plotly_chart(pr_figure, use_container_width=True, config={"displaylogo": False})
+        st.plotly_chart(pr_figure, width="stretch", config={"displaylogo": False})
     with chart_right:
         gains_figure = px.line(
             gains,
@@ -358,7 +360,7 @@ with comparison_tab:
         gains_figure.add_vline(x=0.2, line_dash="dash", line_color="#EDEDED", annotation_text="Top 20%")
         gains_figure.add_hline(y=0.6, line_dash="dot", line_color="#525252", annotation_text="60% target")
         gains_figure.update_layout(template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#0A0A0A", height=410)
-        st.plotly_chart(gains_figure, use_container_width=True, config={"displaylogo": False})
+        st.plotly_chart(gains_figure, width="stretch", config={"displaylogo": False})
     st.markdown(
         '<div class="notice"><b>Scope:</b> reported metrics measure deterministic simulated attacks in this repository. A utility deployment requires labeled field outcomes, temporal/out-of-region validation, drift monitoring, and threshold governance.</div>',
         unsafe_allow_html=True,
@@ -375,7 +377,7 @@ with operations_tab:
     st.dataframe(
         manifest[["rank", "consumer_id", "risk_score", "risk_tier", "primary_signal", "evaluation_split"]],
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
     )
     if manifest.empty:
         st.warning("No consumers are staged. Select rows in the Priority queue or change the manifest source.")
@@ -388,13 +390,13 @@ with operations_tab:
             csv_bytes,
             "field_inspection_manifest.csv",
             "text/csv",
-            use_container_width=True,
+            width="stretch",
         )
         export_right.download_button(
             "Download field manifest · PDF",
             pdf_bytes,
             "field_inspection_manifest.pdf",
             "application/pdf",
-            use_container_width=True,
+            width="stretch",
         )
 
