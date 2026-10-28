@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import base64
 import io
 import json
 from pathlib import Path
@@ -137,6 +138,28 @@ def manifest_pdf(rows: pd.DataFrame) -> bytes:
     story.append(table)
     document.build(story)
     return buffer.getvalue()
+
+
+def sparkline_data_url(values: list[float], width: int = 600, height: int = 46) -> str:
+    """Render a theme-independent white sparkline as an inline SVG image."""
+    series = np.asarray(values, dtype=float)
+    if series.size == 0:
+        return ""
+    lower, upper = float(np.min(series)), float(np.max(series))
+    span = max(upper - lower, 1e-9)
+    x_coordinates = np.linspace(3, width - 3, series.size)
+    y_coordinates = height - 3 - ((series - lower) / span) * (height - 6)
+    points = " ".join(f"{x:.1f},{y:.1f}" for x, y in zip(x_coordinates, y_coordinates))
+    svg = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}">'
+        '<rect width="100%" height="100%" fill="transparent"/>'
+        f'<polyline points="{points}" fill="none" stroke="#F5F5F5" stroke-width="1.6" '
+        'stroke-linecap="round" stroke-linejoin="round"/>'
+        "</svg>"
+    )
+    encoded = base64.b64encode(svg.encode("utf-8")).decode("ascii")
+    return f"data:image/svg+xml;base64,{encoded}"
 
 
 def line_figure(consumer: pd.DataFrame, consumer_id: str) -> go.Figure:
@@ -279,8 +302,11 @@ with overview_tab:
         for cid, group in readings.groupby("consumer_id")
     }
     display = top_ten[["rank", "consumer_id", "risk_score", "risk_tier", "primary_signal"]].copy()
-    display["trend_7d"] = display.consumer_id.map(trend_map)
+    display["trend_7d"] = display.consumer_id.map(trend_map).map(sparkline_data_url)
     display["schedule_inspection"] = display.consumer_id.isin(st.session_state.get("scheduled_ids", []))
+    display = display[
+        ["schedule_inspection", "rank", "consumer_id", "risk_score", "trend_7d", "risk_tier", "primary_signal"]
+    ]
     edited = st.data_editor(
         display,
         hide_index=True,
@@ -291,15 +317,20 @@ with overview_tab:
             "consumer_id": st.column_config.TextColumn("Consumer ID"),
             "risk_score": st.column_config.ProgressColumn("Risk score", min_value=0, max_value=1, format="%.3f"),
             "risk_tier": st.column_config.TextColumn("Risk category"),
-            "primary_signal": st.column_config.TextColumn("Primary anomaly signal", width="large"),
-            "trend_7d": st.column_config.LineChartColumn("Consumption sparkline", y_min=0, width="large"),
-            "schedule_inspection": st.column_config.CheckboxColumn("Schedule field inspection"),
+            "primary_signal": st.column_config.TextColumn("Primary anomaly signal", width="medium"),
+            "trend_7d": st.column_config.ImageColumn("Consumption sparkline", width="medium"),
+            "schedule_inspection": st.column_config.CheckboxColumn(
+                "Inspect", help="Tick to add this consumer to the field inspection manifest", width="small"
+            ),
         },
         key="priority_editor",
     )
     st.session_state["scheduled_ids"] = edited.loc[edited.schedule_inspection, "consumer_id"].tolist()
     scheduled_count = len(st.session_state["scheduled_ids"])
-    st.info(f"{scheduled_count} consumer{'s' if scheduled_count != 1 else ''} staged for field inspection.")
+    if scheduled_count:
+        st.success(f"{scheduled_count} consumer{'s' if scheduled_count != 1 else ''} staged for field inspection.")
+    else:
+        st.info("No consumers scheduled yet. Tick Inspect in the first column to build the field manifest.")
     st.markdown(
         '<div class="notice">Risk scores prioritize investigation; they are not proof of theft. Confirm meter integrity, premises context, and billing history before action.</div>',
         unsafe_allow_html=True,

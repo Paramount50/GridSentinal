@@ -14,7 +14,7 @@ C00273,1,sudden_drop,Sudden Drop,0.9283560034230147,12,0.0375,High,True,test
 C00239,1,intermittent_bypass,Peak Bypass,0.9279983460822123,13,0.040625,High,True,train
 C00216,1,peak_inversion,Peak / Off-Peak Inversion,0.9224435491419464,14,0.04375,High,True,train
 C00124,1,peak_inversion,Peak / Off-Peak Inversion,0.9218945228390371,15,0.046875,High,True,train
-C00112,1,peak_inversion,Peak / Off-Peak Inversion,0.9210086914909374,16,0.05,High,True,train
+C00112,1,peak_inversion,Peak / Off-Peak Inversion,0.9210086914909373,16,0.05,High,True,train
 C00125,1,sudden_drop,Sudden Drop,0.9203780796495075,17,0.053125,High,True,train
 C00198,1,flatline,Mean / Flatline Tamper,0.919365994919629,18,0.05625,High,True,train
 C00056,1,peak_inversion,Peak / Off-Peak Inversion,0.9183698650013422,19,0.059375,High,True,train
@@ -28,22 +28,22 @@ C00029,1,sudden_drop,Sudden Drop,0.9114882864818973,26,0.08125,High,True,train
 C00141,1,sudden_drop,Sudden Drop,0.9105538391685787,27,0.084375,High,True,validation
 C00246,1,flatline,Mean / Flatline Tamper,0.9102656050521718,28,0.0875,High,True,validation
 C00154,1,flatline,Mean / Flatline Tamper,0.9095918717468786,29,0.090625,High,True,train
-C00175,1,intermittent_bypass,Peak Bypass,0.9033560132705504,30,0.09375,High,True,test
-C00025,1,sudden_drop,Sudden Drop,0.9025950900519301,31,0.096875,High,True,test
+C00175,1,intermittent_bypass,Peak Bypass,0.9033560132705502,30,0.09375,High,True,test
+C00025,1,sudden_drop,Sudden Drop,0.9025950900519298,31,0.096875,High,True,test
 C00307,1,intermittent_bypass,Peak Bypass,0.9007665461983846,32,0.1,High,True,validation
 C00039,1,intermittent_bypass,Peak Bypass,0.894788571978509,33,0.103125,Medium-High,False,train
 C00212,1,peak_inversion,Peak / Off-Peak Inversion,0.8875178732056943,34,0.10625,Medium-High,False,train
 C00252,1,peak_inversion,Peak / Off-Peak Inversion,0.88438956233009,35,0.109375,Medium-High,False,train
-C00285,1,sudden_drop,Sudden Drop,0.8831926017073429,36,0.1125,Medium-High,False,train
+C00285,1,sudden_drop,Sudden Drop,0.8831926017073428,36,0.1125,Medium-High,False,train
 C00153,1,sudden_drop,Sudden Drop,0.878682669924934,37,0.115625,Medium-High,False,validation
-C00264,1,peak_inversion,Peak / Off-Peak Inversion,0.8516501238479708,38,0.11875,Medium-High,False,validation
+C00264,1,peak_inversion,Peak / Off-Peak Inversion,0.8516501238479707,38,0.11875,Medium-High,False,validation
 C00280,1,peak_inversion,Peak / Off-Peak Inversion,0.8334093954076245,39,0.121875,Medium-High,False,test
 C00028,1,peak_inversion,Peak / Off-Peak Inversion,0.5749181613655261,40,0.125,Medium-High,False,test
 C00152,0,benign,Normal,0.02327665014720387,41,0.128125,Medium-High,False,test
 C00061,0,benign,Normal,0.022782303429498333,42,0.13125,Medium-High,False,test
 C00129,0,benign,Normal,0.022645626834931033,43,0.134375,Medium-High,False,train
 C00091,0,benign,Normal,0.022436851457312126,44,0.1375,Medium-High,False,validation
-C00236,0,benign,Normal,0.02218580576773496,45,0.140625,Medium-High,False,validation
+C00236,0,benign,Normal,0.02218580576773495,45,0.140625,Medium-High,False,validation
 C00104,0,benign,Normal,0.021610391566928146,46,0.14375,Medium-High,False,train
 C00148,0,benign,Normal,0.021447020397065752,47,0.146875,Medium-High,False,validation
 C00014,0,benign,Normal,0.021235677607645508,48,0.15,Medium-High,False,validation
@@ -65,7 +65,7 @@ C00274,0,benign,Normal,0.019326399520362348,63,0.196875,Medium-High,False,train
 C00108,0,benign,Normal,0.019300533856603495,64,0.2,Medium-High,False,train
 C00255,0,benign,Normal,0.019233402539378,65,0.203125,Medium,False,train
 C00301,0,benign,Normal,0.01918760059899768,66,0.20625,Medium,False,validation
-C00176,0,benign,Normal,0.019102246698802682,67,0.209375,Medium,False,train
+C00176,0,benign,Normal,0.019102246698802675,67,0.209375,Medium,False,train
 C00170,0,benign,Normal,0.01908003847391741,68,0.2125,Medium,False,test
 C00166,0,benign,Normal,0.019004342811617333,69,0.215625,Medium,False,train
 C00238,0,benign,Normal,0.018992583784294106,70,0.21875,Medium,False,test

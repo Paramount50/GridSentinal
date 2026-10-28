@@ -52,6 +52,8 @@ python evaluate_models.py
 python -m streamlit run app.py
 ```
 
+`python evaluate_models.py` retrains both models and refreshes the committed benchmark artifacts. You only need it for the initial setup or when changing the data/model pipeline. For normal dashboard use, activate the venv and run only `python -m streamlit run app.py`.
+
 Using `python -m` for installation and launch guarantees that both commands use the interpreter from the active `.venv`. Verify it before running the benchmark:
 
 ```powershell

@@ -34,10 +34,10 @@ def build_random_forest(seed: int = 42) -> CalibratedClassifierCV:
         min_samples_leaf=2,
         max_features="sqrt",
         class_weight="balanced_subsample",
-        n_jobs=-1,
+        n_jobs=1,
         random_state=seed,
     )
-    return CalibratedClassifierCV(forest, method="sigmoid", cv=3, n_jobs=-1)
+    return CalibratedClassifierCV(forest, method="sigmoid", cv=3, n_jobs=1)
 
 
 class TheftLSTM(nn.Module):
